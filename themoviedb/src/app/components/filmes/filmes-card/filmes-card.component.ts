@@ -26,8 +26,9 @@ export class FilmesCardComponent implements OnInit {
   checaAvalia(){
     if(localStorage.getItem('guest_session_id') == ""){
       this.criaGuestSession()
+    } else{
+      this.avalia(); 
     }
-    this.avalia(); 
   }
 
   avalia(){
@@ -57,6 +58,7 @@ export class FilmesCardComponent implements OnInit {
     this.tmdbApiService.createGuestSession().subscribe((resposta: any) => {
       //console.log(localStorage.getItem('guest_session_id'))
       this.errorMsg = "";
+      this.avalia(); 
     },
     error => {
       //console.log(error)

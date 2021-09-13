@@ -25,14 +25,17 @@ export class TvseriesCardComponent implements OnInit {
   checaAvalia(){
     if(localStorage.getItem('guest_session_id') == ""){
       this.criaGuestSession()
+    } else{
+      this.avalia(); 
     }
-    this.avalia(); 
+    
   }
 
   criaGuestSession(){
     this.tmdbApiService.createGuestSession().subscribe((resposta: any) => {
       //console.log(localStorage.getItem('guest_session_id'))
       this.errorMsg = "";
+      this.avalia(); 
     },
     error => {
       //console.log(error)
