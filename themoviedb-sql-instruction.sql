@@ -1,3 +1,5 @@
+CREATE SCHEMA `cappacita_tmdb` ;
+
 CREATE TABLE `cappacita_tmdb`.`general_info_api_tmdb_usage` (
   `id` INT UNSIGNED NOT NULL AUTO_INCREMENT,
   `api_used_type` VARCHAR(50) NOT NULL,

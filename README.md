@@ -35,9 +35,8 @@ Cada utilização da api TMDb será registrada no Banco de Dados, incluindo a ch
 
 ####Criação do Banco de Dados:
 
-* Criar o Banco de Dados **cappacita_tmdb**
+* Criar o Banco de Dados **cappacita_tmdb** executando o script **themoviedb-sql-instruction.sql** para a criação das tabelas do banco.
 
-* Executar o script **themoviedb-sql-instruction.sql** para a criação das tabelas do banco.
 
 ####Configurando o backend de comunicação com o Banco de Dados:
 
