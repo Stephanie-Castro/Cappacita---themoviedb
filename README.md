@@ -44,13 +44,14 @@ Cada utilização da api TMDb será registrada no Banco de Dados, incluindo a ch
 * Acessar a pasta do projeto **themoviedb - backend** e executar `npm install`para instalar todas as dependências.
 
 * No arquivo knexFile.js, localizado em *\themoviedb - backend\src\database\knexFilme.js*  configurar o acesso ao Banco de Dados:
-  ```
+
+```
 host : '127.0.0.1',
 port : 3306,
 user : 'SEU-USUÁRIO-AQUI',
 password : 'SUA-SENHA-AQUI',
 database : 'cappacita_tmdb'
-  ```
+```
 
 ####Configurando o projeto Angular:
 
@@ -58,11 +59,11 @@ database : 'cappacita_tmdb'
 
 * No arquivo environment.ts, localizado em *themoviedb\src\environments\environment.ts*  configurar a chave api de comunicação com a api TMDb e configurar a comunicação com o Backend :
 
-  ```
+```
   api_key: "SUA-CHAVE-API-TMDB-AQUI",
 database_url: "http://localhost:",
 _port: "3003" //porta de comunicação com o backend
-  ```
+```
 
 ### Executing program
 
