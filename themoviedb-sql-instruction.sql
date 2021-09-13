@@ -1,3 +1,5 @@
+-- DROP SCHEMA `cappacita_tmdb`;
+
 CREATE SCHEMA `cappacita_tmdb` ;
 
 CREATE TABLE `cappacita_tmdb`.`general_info_api_tmdb_usage` (
