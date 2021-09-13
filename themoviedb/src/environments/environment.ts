@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  api_key: "7c836e03202169fc62e0e8f1b257284a",
+  api_key: "<<API-KEY-AQUI>>",
   database_url: "http://localhost:",
   _port: "3003"
 };
