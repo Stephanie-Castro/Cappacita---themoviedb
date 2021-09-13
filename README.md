@@ -74,4 +74,5 @@ _port: "3003" //porta de comunicação com o backend
 
 ## A Fazer:
 - [ ] Tratamento de erros
+- [ ] Melhorar Banco de Dados
 - [ ] Explorar mais o uso da API
