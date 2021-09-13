@@ -1,0 +1,6 @@
+<div *ngIf="checaExisteErro()">
+    <app-filmes-card *ngFor="let item of listaTopRatedFilmes" [filme]="item"></app-filmes-card>
+</div>
+<div *ngIf="!checaExisteErro()" class="show_error">
+    {{errorMsg}}
+</div>

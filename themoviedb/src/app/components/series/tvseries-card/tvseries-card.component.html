@@ -1,0 +1,35 @@
+
+<mat-card class="tvseries-card">
+	<mat-card-header>
+		<mat-card-title>{{tvserie?.name}}</mat-card-title>
+    	<mat-card-subtitle>
+			<div>{{tvserie?.original_name}}</div>
+			<div>- Original Language: {{tvserie?.original_language}}</div>
+		</mat-card-subtitle>
+	</mat-card-header>
+	<img mat-card-image  class="tvseries_img" [src]="tvserie?.poster_path" [alt]="tvserie?.name">
+	<mat-card-content>
+		<p>
+			{{tvserie?.overview}}
+		</p>
+		<p>
+			<b>Average Note:</b> {{tvserie?.vote_average}}
+		</p>
+
+		<div>
+			Rate Tvserie: 
+			<ngb-rating [(rate)]="currentRate" (click)="checaAvalia()">
+			<ng-template let-fill="fill" let-index="index">
+				<span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+			</ng-template>
+			</ngb-rating>
+			<pre>Rate: <b>{{currentRate}}</b></pre>
+			
+			<div *ngIf="!checaExisteErro()" class="show_error">
+				{{errorMsg}}
+			</div>
+			
+		</div>
+		
+	  </mat-card-content>
+</mat-card>

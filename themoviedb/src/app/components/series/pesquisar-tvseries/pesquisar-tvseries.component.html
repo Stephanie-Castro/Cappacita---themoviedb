@@ -1,0 +1,15 @@
+<div>
+    <h1>Pesquisar por nome do programa de tv:</h1>
+    Nome do programa de tv: <input #nomeTvserie type="text"/> <br/>
+    <button (click)="nomeDaTvserieAPesquisar(nomeTvserie.value)"> Pesquisar </button> <br/>
+</div>
+
+<div *ngIf="checaExisteErro()">
+    <app-tvseries-card *ngFor="let item of listaPesquisaTvserie" [tvserie]="item"></app-tvseries-card>
+</div>
+<div *ngIf="!checaExisteErro()" class="show_error">
+    {{errorMsg}}
+</div>
+
+
+

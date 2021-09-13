@@ -1,0 +1,35 @@
+<mat-card class="filme-card">
+	<mat-card-header>
+		<mat-card-title>{{filme?.title}}</mat-card-title>
+    	<mat-card-subtitle>
+			<div>{{filme?.original_title}}</div>
+			<div>- Original Language: {{filme?.original_language}}</div>
+		</mat-card-subtitle>
+	</mat-card-header>
+	<img mat-card-image  class="filme_img" [src]="filme?.poster_path" [alt]="filme?.title">
+	<mat-card-content>
+		<p>
+			{{filme?.overview}}
+		</p>
+		<p>
+			<b>Average Note:</b> {{filme?.vote_average}}
+		</p>
+
+		<div>
+			Rate movie: 
+			<ngb-rating [(rate)]="currentRate" (click)="checaAvalia()">
+			<ng-template let-fill="fill" let-index="index">
+				<span class="star" [class.filled]="fill === 100" [class.bad]="index < 3">&#9733;</span>
+			</ng-template>
+			</ngb-rating>
+			<pre>Rate: <b>{{currentRate}}</b></pre>
+
+			<div *ngIf="!checaExisteErro()" class="show_error">
+				{{errorMsg}}
+			</div>
+			
+		</div>
+		
+
+	  </mat-card-content>
+</mat-card>

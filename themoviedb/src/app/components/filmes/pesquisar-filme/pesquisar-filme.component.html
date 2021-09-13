@@ -1,0 +1,13 @@
+<div>
+    <h1>Pesquisar por nome do filme:</h1>
+    Nome do filme: <input #nomeFilme type="text"/> <br/>
+    <button (click)="nomeDoFilmeAPesquisar(nomeFilme.value)"> Pesquisar </button> <br/>
+</div>
+
+<div *ngIf="checaExisteErro()">
+    <app-filmes-card *ngFor="let item of listaPesquisaFilme" [filme]="item"></app-filmes-card>
+</div>
+<div *ngIf="!checaExisteErro()" class="show_error">
+    {{errorMsg}}
+</div>
+
